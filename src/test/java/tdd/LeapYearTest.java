@@ -25,4 +25,14 @@ class LeapYearTest {
         assertFalse(LeapYear.isLeapYear(notLeapYearAsDivisibleBy100));
     }
 
+    @Test
+    public void allYearsDivisibleBy100AndNotBy400ShouldNotBeLeapYear() {
+        int leapYear = 2400;
+        int notLeapYearDivisibleBy100ButNotBy400 = 2200;
+        assertTrue(LeapYear.isLeapYear(leapYear));
+        assertFalse(LeapYear.isLeapYear(notLeapYearDivisibleBy100ButNotBy400));
+    }
+
+
+
 }
